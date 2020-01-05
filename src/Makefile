@@ -3,7 +3,7 @@ TARGET2 = demo_car_simple
 
 TARGETS = $(TARGET1) $(TARGET2)
 
-COPSIM_DIR=$(HOME)/../CoppeliaSim
+COPSIM_DIR=/opt/CoppeliaSim
 
 API_DIR = $(COPSIM_DIR)/programming
 
