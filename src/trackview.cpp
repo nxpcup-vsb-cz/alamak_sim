@@ -95,7 +95,7 @@ int trackviewStop()
 
 void trackviewAddImage( unsigned char *t_img )
 {
-    memcpy( g_trackview_img.ptr( 1 ), g_trackview_img.ptr( 0 ), sizeof( uchar ) * ( g_trackview_img.total() - g_trackview_img.cols ) );
+    memmove( g_trackview_img.ptr( 1 ), g_trackview_img.ptr( 0 ), sizeof( uchar ) * ( g_trackview_img.total() - g_trackview_img.cols ) );
     memcpy( g_trackview_img.ptr( 0 ), t_img, sizeof( uchar ) * g_trackview_img.cols );
 
     pthread_mutex_unlock( &g_trackview_mutex );
